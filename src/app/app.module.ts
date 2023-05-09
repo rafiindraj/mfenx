@@ -17,10 +17,10 @@ import { NavModule } from '@mfenx/nav';
       //   path: '',
       //   loadChildren: () => import('@mfenx/nav').then((m) => m.NavModule),
       // },
-      {
-        path: '**',
-        component: LandingComponent,
-      },
+      // {
+      //   path: '**',
+      //   component: LandingComponent,
+      // },
     ]),
   ],
   providers: [],
