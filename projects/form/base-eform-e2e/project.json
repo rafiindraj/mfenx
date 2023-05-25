@@ -1,0 +1,33 @@
+{
+  "name": "projects-form-base-eform-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/form/base-eform-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "projects/form/base-eform-e2e/cypress.config.ts",
+        "devServerTarget": "projects-form-base-eform:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "projects-form-base-eform:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "projects-form-base-eform:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["projects/form/base-eform-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["projects-form-base-eform"]
+}

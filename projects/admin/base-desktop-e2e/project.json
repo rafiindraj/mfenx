@@ -1,0 +1,33 @@
+{
+  "name": "projects-admin-base-desktop-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/admin/base-desktop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "projects/admin/base-desktop-e2e/cypress.config.ts",
+        "devServerTarget": "projects-admin-base-desktop:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "projects-admin-base-desktop:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "projects-admin-base-desktop:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["projects/admin/base-desktop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["projects-admin-base-desktop"]
+}
