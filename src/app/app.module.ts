@@ -13,6 +13,10 @@ import { NavModule } from '@mfenx/nav';
     BrowserModule,
     NavModule,
     RouterModule.forRoot([
+      {
+        path:'env.js',
+        component: LandingComponent,
+      }
       // {
       //   path: '',
       //   loadChildren: () => import('@mfenx/nav').then((m) => m.NavModule),
