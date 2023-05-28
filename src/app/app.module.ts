@@ -6,17 +6,23 @@ import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavModule } from '@mfenx/nav';
+import { PillComponent } from './pill/pill.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, LandingComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    LandingComponent,
+    PillComponent,
+  ],
   imports: [
     BrowserModule,
     NavModule,
     RouterModule.forRoot([
       {
-        path:'env.js',
+        path: 'env.js',
         component: LandingComponent,
-      }
+      },
       // {
       //   path: '',
       //   loadChildren: () => import('@mfenx/nav').then((m) => m.NavModule),

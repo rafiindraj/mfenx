@@ -1,0 +1,40 @@
+<!-- SUCCESS -->
+<span class="wrapper-badge-success" *ngIf="type === 'success'">
+    <div class="wrapper-img-badge-success" *ngIf="linkImage">
+      <img class="img-badge-success" src="{{ deployUrl }}{{ linkImage }}" alt="icon-badge-success" />
+    </div>
+    <div class="{{fontStyle}} text-badge-success">{{ text }}</div>
+  </span>
+  
+  <!-- DANGER -->
+  <span class="wrapper-badge-danger" *ngIf="type === 'danger'">
+    <div class="wrapper-img-badge-danger" *ngIf="linkImage">
+      <img class="img-badge-danger" src="{{ deployUrl }}{{ linkImage }}" alt="icon-badge-danger" />
+    </div>
+    <div class="{{fontStyle}} text-badge-danger">{{ text }}</div>
+  </span>
+  
+  <!-- PRIMARY -->
+  <span class="wrapper-badge-primary" *ngIf="type === 'primary'">
+    <div class="wrapper-img-badge-primary" *ngIf="linkImage">
+      <img class="img-badge-primary" src="{{ deployUrl }}{{ linkImage }}" alt="icon-badge-primary" />
+    </div>
+    <div class="{{fontStyle}} text-badge-primary">{{ text }}</div>
+  </span>
+  
+  <!-- WARNING -->
+  <span class="wrapper-badge-warning" *ngIf="type === 'warning'">
+    <div class="wrapper-img-badge-warning" *ngIf="linkImage">
+      <img class="img-badge-warning" src="{{ deployUrl }}{{ linkImage }}" alt="icon-badge-warning" />
+    </div>
+    <div class="{{fontStyle}} text-badge-warning">{{ text }}</div>
+  </span>
+  
+  <!-- GRAY -->
+  <span class="wrapper-badge-gray" *ngIf="type === 'gray'">
+    <div class="wrapper-img-badge-gray" *ngIf="linkImage">
+      <img class="img-badge-gray" src="{{ deployUrl }}{{ linkImage }}" alt="icon-badge-gray" />
+    </div>
+    <div class="{{fontStyle}} text-badge-gray">{{ text }}</div>
+  </span>
+  
