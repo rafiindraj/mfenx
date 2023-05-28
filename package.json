@@ -10,6 +10,7 @@
     "base-eform:build" : "nx run projects-form-base-eform:build",
     "base-desktop:serve" : "nx run projects-admin-base-desktop:serve",
     "base-eform:serve" : "nx run projects-form-base-eform:serve",
+    "create-app" : "nx g app",
     "create-component": "npx nx g @nx/angular:component",
     "create-library": "npx nx g @nx/angular:lib"
   },
