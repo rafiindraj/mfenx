@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -15,3 +15,12 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+@NgModule({})
+export class FormSharedModule{
+  static forRoot(): ModuleWithProviders<AppModule> {
+    return {
+      ngModule: AppModule,
+      providers: []
+    }
+  }
+}
